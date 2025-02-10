@@ -1,0 +1,263 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script>
+tailwind.config={
+  theme:{
+    extend:{
+      colors:{
+        pri:{
+          500:"#da373d"
+        },
+        sec:{
+          100:"#f1f1f1",
+          200:"#ccc",
+          300:"#777",
+          400:"#333",
+          800:"#211F1D"
+        },
+        white:"#fff",
+        green:"#3FDBA9",
+        blue:"#385CC4",
+        yellow:"#FFB13C",
+        },
+      },
+    },
+  };
+
+   </script> 
+    <title>Dashboard</title>
+</head>
+<body>
+<div class="text-3xl text-blue">Hello</div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Use the official Tailwind CDN link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="flex h-screen overflow-y-hidden">
+      <div class="w-60 bg-gray-800 text-white p-4">
+      <h2 class="text-2xl py-2 mb-5 font-semibold text-center">
+        Project MGR
+      </h2>
+      <div class="flex flex-col justify-between" style="height:calc(100vh-200px)">
+        <div>
+          <div class="flex items-center gap-2 p-2 cursor-pointer rounded-md hover:bg-red-500">
+            <i class="ri-dashboard-line text-lg"></i>
+            <p>Dashboard</p>
+          </div>
+          <div class="flex items-center gap-2 p-2 cursor-pointer rounded-md bg-pri-500">
+            <i class="ri-pie-chart-line text-lg"></i>
+            <p>Projects</p>
+          </div>
+          <div class="flex items-center gap-2 p-2 cursor-pointer rounded-md bg-pri-500">
+            <i class="ri-file-list-2-line text-lg"></i>
+            <p>Task list</p>
+          </div>
+          <div class="flex items-center gap-2 p-2 cursor-pointer rounded-md bg-pri-500">
+            <i class="ri-expand-left-right-line text-lg"></i>
+            <p>Services</p>
+          </div>
+          <div class="flex items-center gap-2 p-2 cursor-pointer rounded-md bg-pri-500">
+            <i class="ri-notification-3-line text-lg"></i>
+            <p>Notifications</p>
+          </div>
+          <div class="flex items-center gap-2 p-2 cursor-pointer rounded-md bg-pri-500">
+            <i class="ri-question-line text-lg"></i>
+            <p>Help</p>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 p-2 cursor-pointer rounded-md bg-pri-500">
+            <i class="ri-settings-3-line text-lg"></i>
+            <p>Settings</p>
+          </div>
+          <div class="flex items-center gap-2 p-2 cursor-pointer rounded-md bg-pri-500">
+            <i class="ri-logout-box-line text-lg"></i>
+            <p>Logout</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="w-full bg-gray-200">
+        <div class="flex items-center jusify-between p-4 bg-white">
+          <div class="flex items-center gap-3">
+            <div class="relative h-10 w-10 rounded-full overflow-hidden">
+              <img src="Avatar.png"
+               class="absolute top-0 left-0 width-full h-full object-cover"/>
+            </div>
+            <div>
+              <h3 class="text-xl text-gray-600">Prachi Raval</h3>
+              <p class="text-gray-400">Project Manager</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-5">
+            <div class="bg-gray-100 ml-80 py-2 px-5 rounded-md">
+              <input class="bg-inherit outline-none w-96" placeholder="Search anything..."/>
+            </div>
+            <div class="bg-gray-100 h-10 w-10 rounded-full flex items-center justify-center">
+              <i class="ri-notification-line"></i>
+            </div>
+            <div class="bg-gray-100 h-10 w-10 rounded-full flex items-center justify-center">
+              <i class="ri-message-2-line"></i>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 p-4 items-start gap-4">
+          <div class="col-span-2 bg-white rounded-md overflow-hidden relative">
+            <div class="flex items-center justify-between p-4">
+              <div>
+                <h2 class="text-3xl font-semibold text-gray-500">Last tasks</h2>
+                <p class="text-gray-400"><span class="font-semiblod text-gray-500">124 total,</span> proceed to resolve them</p>
+              </div>
+              <div class="flex items-center gap-10">
+                <div class="text-center">
+                  <h2 class="text-3xl font-semibold text-gray-600">45</h2>
+                  <p class="text-gray-500">Done</p>
+                </div>
+                <div class="text-center">
+                  <h2 class="text-3xl font-semibold text-gray-600">21</h2>
+                  <p class="text-gray-500">In progress</p>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 overflow-y-scroll" style="height:calc(100vh-200px)">
+              <table class="w-full text-right">
+                <thread class="text-gray-400">
+                  <tr>
+                    <th class="text-left">Name</th>
+                    <th>Admin</th>
+                    <th>Member</th>
+                    <th>Status</th>
+                    <th>Finish date</th>
+                  </tr>
+                </thread>
+                <tbody class="text-gray-500">
+                  <tr class="h-10 hover:bg-red-500 hover:text-white">
+                    <td class="text-left">State Management</td>
+                    <td>Alan Das <i class="ri-message-2-line text-green"></i></td>
+                    <td>3</td>
+                    <td>Done</td>
+                    <td>10/02/2025</td>
+                  </tr>
+                  <tr class="h-10 hover:bg-red-500 hover:text-white">
+                    <td class="text-left">State Management</td>
+                    <td>Alan Das <i class="ri-message-2-line text-green"></i></td>
+                    <td>3</td>
+                    <td>Done</td>
+                    <td>10/02/2025</td>
+                  </tr>
+                  <tr class="h-10 hover:bg-red-500 hover:text-white">
+                    <td class="text-left">State Management</td>
+                    <td>Alan Das <i class="ri-message-2-line text-green"></i></td>
+                    <td>3</td>
+                    <td>Done</td>
+                    <td>10/02/2025</td>
+                  </tr>
+                  <tr class="h-10 hover:bg-red-500 hover:text-white">
+                    <td class="text-left">State Management</td>
+                    <td>Alan Das <i class="ri-message-2-line text-green"></i></td>
+                    <td>3</td>
+                    <td>Done</td>
+                    <td>10/02/2025</td>
+                  </tr>
+                  <tr class="h-10 hover:bg-red-500 hover:text-white">
+                    <td class="text-left">State Management</td>
+                    <td>Alan Das <i class="ri-message-2-line text-green"></i></td>
+                    <td>3</td>
+                    <td>Done</td>
+                    <td>10/02/2025</td>
+                  </tr>
+                  <tr class="h-10 hover:bg-red-500 hover:text-white">
+                    <td class="text-left">State Management</td>
+                    <td>Alan Das <i class="ri-message-2-line text-green"></i></td>
+                    <td>3</td>
+                    <td>Done</td>
+                    <td>10/02/2025</td>
+                  </tr>
+                  <tr class="h-10 hover:bg-red-500 hover:text-white">
+                    <td class="text-left">State Management</td>
+                    <td>Alan Das <i class="ri-message-2-line text-green"></i></td>
+                    <td>3</td>
+                    <td>Done</td>
+                    <td>10/02/2025</td>
+                  </tr>
+                  <tr class="h-10 hover:bg-red-500 hover:text-white">
+                    <td class="text-left">State Management</td>
+                    <td>Alan Das <i class="ri-message-2-line text-green"></i></td>
+                    <td>3</td>
+                    <td>Done</td>
+                    <td>10/02/2025</td>
+                  </tr>
+                  <tr class="h-10 hover:bg-red-500 hover:text-white">
+                    <td class="text-left">State Management</td>
+                    <td>Alan Das <i class="ri-message-2-line text-green"></i></td>
+                    <td>3</td>
+                    <td>Done</td>
+                    <td>10/02/2025</td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="bg-white rounded-md overflow-y-hidden" style="height:calc(100vh - 110px);">
+            <div class="rounded-md bg-gray-100 m-4 py-5">
+              <div class="relative h-16 w-16 rounded-full overflow-hidden mx-auto">
+                <img src="Avatar2.png" alt="" class="absolute top-0 left-0 w-full h-full object-cover">
+              </div>
+              <h3 class="text-center font-semibold text-lg text-gray-600 mt-2">John Smith</h3>
+              <p class="text-center text-gray-500 mt-1">@peppynestadmin24</p>
+              <div class="flex items-center justify-center gap-4 mt-3">
+                <div class="bg-white h-8 w-8 rounded-full flex items-center justify-center">
+                  <i class="ri-phone-line"></i>
+                </div>
+                <div class="bg-white h-8 w-8 rounded-full flex items-center justify-center">
+                  <i class="ri-vidicon-line"></i>
+                </div>
+
+                <div class="bg-white h-8 w-8 rounded-full flex items-center justify-center">
+                  <i class="ri-more-2-line"></i>
+                </div>
+              </div>
+            </div>
+            <div class="mt-5 overflow-y-hidden px-4">
+              <div class="p-2 bg-red-500 text-white w-56 ml-auto rounded-md rounded-br-none mb-4">some message here</div>
+            </div>
+            <div class="p-2 bg-blue-500 text-white w-56 mr-auto rounded-md rounded-br-none mb-4">some message here</div>
+            <div class="p-2 bg-red-500 text-white w-56 ml-auto rounded-md rounded-br-none mb-4">some message here</div>
+          </div>
+          <div class="p-2 bg-blue-500 text-white w-56 mr-auto rounded-md rounded-br-none mb-4">some message here</div>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-2 bg-white">
+            <div class="flex items-center bg-sec-100 p-2 gap-2">
+              <i class="ri-attachment-line"></i>
+              <i class="ri-user-smile-line"></i>
+              <i class="ri-mic-line"></i>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+
+
+
